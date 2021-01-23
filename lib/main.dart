@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:massage_app/tabs/Agenda.dart';
 import './globals.dart';
-import './BottomBar.dart';
+//import './BottomBar.dart';
 import 'tabs/Home.dart';
 import 'tabs/login_page.dart';
 import 'tabs/News.dart';
 import 'tabs/team.dart';
-import 'tabs/Home.dart';
+//import 'tabs/Home.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //debugShowCheckedModeBanner: true,
-      title: 'Flutter Demo',
+      //title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.orange,
         accentColor: Colors.amber,
@@ -72,54 +72,54 @@ class _MyHomePageState extends State<MyHomePage> {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: AppBar(
-            brightness: Brightness.dark,
-            toolbarHeight: 80,
-            backgroundColor: primaryColor,
-            flexibleSpace: SafeArea(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        width: 20,
-                      ),
-                      Text(
-                        widget.title,
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Container(
-                        width: 20,
-                        child:
-                            new Icon(Icons.tune, size: 28, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                  TabBar(
-                    indicatorColor: secondaryColor,
-                    indicatorWeight: 3,
-                    labelStyle:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                    tabs: [
-                      Tab(
-                        text: 'ATLETAS',
-                      ),
-                      Tab(
-                        text: 'ADMINISTRADOR',
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            // Here we take the value from the MyHomePage object that was created by
-            // the App.build method, and use it to set our appbar title.
-          ),
+          // appBar: AppBar(
+          //   brightness: Brightness.dark,
+          //   toolbarHeight: 80,
+          //   backgroundColor: primaryColor,
+          //   flexibleSpace: SafeArea(
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //       children: [
+          //         Row(
+          //           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //           children: [
+          //             Container(
+          //               width: 20,
+          //             ),
+          //             Text(
+          //               widget.title,
+          //               style: TextStyle(
+          //                   fontSize: 16,
+          //                   fontWeight: FontWeight.bold,
+          //                   color: Colors.white),
+          //             ),
+          //             Container(
+          //               width: 20,
+          //               child:
+          //                   new Icon(Icons.tune, size: 28, color: Colors.white),
+          //             ),
+          //           ],
+          //         ),
+          //         TabBar(
+          //           indicatorColor: secondaryColor,
+          //           indicatorWeight: 3,
+          //           labelStyle:
+          //               TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          //           tabs: [
+          //             Tab(
+          //               text: 'ATLETAS',
+          //             ),
+          //             Tab(
+          //               text: 'ADMINISTRADOR',
+          //             )
+          //           ],
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          //   // Here we take the value from the MyHomePage object that was created by
+          //   // the App.build method, and use it to set our appbar title.
+          // ),
           body: _pageOptions[_selectedIndex],
 
           // TabBarView(

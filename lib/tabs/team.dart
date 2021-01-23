@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:massage_app/Administrador.dart';
+//import 'package:massage_app/Administrador.dart';
 import '../globals.dart';
 
 class Team extends StatelessWidget {
@@ -20,7 +20,7 @@ class Team extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'EQUIPA PORTUGAL'),
+      home: MyHomePage(title: 'OS TCHURÕES'),
     );
   }
 }
@@ -61,69 +61,79 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        // appBar: AppBar(
-        //   brightness: Brightness.dark,
-        //   toolbarHeight: 80,
-        //   backgroundColor: primaryColor,
-        //   flexibleSpace: SafeArea(
-        //     child: Column(
-        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //       children: [
-        //         Row(
-        //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //           children: [
-        //             Container(
-        //               width: 20,
-        //             ),
-        //             Text(
-        //               widget.title,
-        //               style: TextStyle(
-        //                   fontSize: 16,
-        //                   fontWeight: FontWeight.bold,
-        //                   color: Colors.white),
-        //             ),
-        //             Container(
-        //               width: 20,
-        //               child:
-        //                   new Icon(Icons.tune, size: 28, color: Colors.white),
-        //             ),
-        //           ],
-        //         ),
-        //         TabBar(
-        //           controller: _tabController,
-        //           indicatorColor: redColor,
-        //           indicatorWeight: 3,
-        //           labelStyle:
-        //               TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-        //           tabs: [
-        //             Tab(
-        //               text: 'ATLETAS',
-        //             ),
-        //             Tab(
-        //               text: 'OFICIAIS',
-        //             )
-        //           ],
-        //         ),
-        //       ],
-        //     ),
-        //   ),
-        //   // Here we take the value from the MyHomePage object that was created by
-        //   // the App.build method, and use it to set our appbar title.
-        // ),
-        body: SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            height: 5,
+      appBar: AppBar(
+        brightness: Brightness.dark,
+        toolbarHeight: 80,
+        backgroundColor: primaryColor,
+        flexibleSpace: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 20,
+                  ),
+                  Text(
+                    widget.title,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  Container(
+                    width: 20,
+                    child: new Icon(Icons.tune, size: 28, color: Colors.white),
+                  ),
+                ],
+              ),
+              TabBar(
+                controller: _tabController,
+                indicatorColor: secondaryColor,
+                indicatorWeight: 3,
+                labelStyle:
+                    TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                tabs: [
+                  Tab(
+                    text: 'ATLETAS',
+                  ),
+                  Tab(
+                    text: 'OFICIAIS',
+                  )
+                ],
+              ),
+            ],
           ),
+        ),
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+      ),
+
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       Container(
+      //         height: 5,
+      //       ),
+      //       AthleteCard('Catarina Ribeiro', 'Atletismo', 'nature.png'),
+      //       AthleteCard('Cláudia Pereira', 'Atletismo', 'waiting.png'),
+      //       AdminCard('Carlos Bessa', 'Atletismo', 'profile.png')
+
+      //       // AthleteCard()
+      //     ],
+      //   ),
+      // )
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          //  1 )criar widgets independentes para cada tabBarview e invoca-los
           AthleteCard('Catarina Ribeiro', 'Atletismo', 'nature.png'),
           AthleteCard('Cláudia Pereira', 'Atletismo', 'waiting.png'),
-          AdminCard('Carlos Bessa', 'Atletismo', 'profile.png')
-
-          // AthleteCard()
+          // Icon(Icons.directions_bike),
         ],
       ),
-    ));
+    );
   }
 }
 
